@@ -78,3 +78,5 @@ class Game:
         self.generate_obstacles(5)
         self.game_loop()
 
+if __name__ == "__main__":
+    Game().run_game()
