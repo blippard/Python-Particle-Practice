@@ -72,4 +72,7 @@ class Game:
             self.refresh()
             time.sleep(0.05)
 
+    def run_game(self):
+        self.generate_obstacles(5)
+        self.game_loop()
 
