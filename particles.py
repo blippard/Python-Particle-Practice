@@ -51,4 +51,11 @@ class Game:
             particle.move_to_available(self.game_map.map)
             self.game_map.map[particle.y_pos][particle.x_pos] = particle.icon
 
+    def generate_obstacles(self, amount):
+        for _ in range(amount):
+            x_pos = random.randint(0, 20)
+            y_pos = random.randint(0, 20)
+            length = random.randint(5, 10)
+            self.game_map.insert_obstacle(x_pos, y_pos, length)
+
 
