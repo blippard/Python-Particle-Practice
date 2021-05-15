@@ -65,4 +65,11 @@ class Game:
         self.position_particles()
         self.game_map.print_map()
 
+    def game_loop(self):
+        while True:
+            self.generate_particles("█")
+            self.clear_screen()
+            self.refresh()
+            time.sleep(0.05)
+
 
