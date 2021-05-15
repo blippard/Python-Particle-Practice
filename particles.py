@@ -1,3 +1,5 @@
+import random
+
 global bg_block
 bg_block = " "
 
@@ -14,5 +16,13 @@ class Map:
         obstacle_length = x_pos + length
         for x_coord in range(x_pos, obstacle_length):
             self.map[y_pos][x_coord] = "\033[37;47m*\1xb[0m"
+
+class Particle:
+
+    def __init__(self, x_pos, y_pos, icon):
+        self.x_pos = x_pos
+        self.y_pos = y_pos
+        self.icon = f"\033[{random.randint(31, 33)}m{icon}\x1b[0m"
+
 
 
