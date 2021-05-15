@@ -36,4 +36,9 @@ class Particle:
             self.y_pos += 1
             self.x_pos += 1
 
+class Game:
+
+    def __init__(self):
+        self.game_map = Map(30, 30)
+        self.particle_list = []
 
