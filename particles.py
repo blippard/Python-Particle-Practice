@@ -42,3 +42,6 @@ class Game:
         self.game_map = Map(30, 30)
         self.particle_list = []
 
+    def generate_particle(self, icon):
+        self.particle_list.append(Particle(random.randint(5, 15), 0, icon))
+
