@@ -58,4 +58,7 @@ class Game:
             length = random.randint(5, 10)
             self.game_map.insert_obstacle(x_pos, y_pos, length)
 
+    def clear_screen(self):
+        os.system("cls" if os.name == "nt" else "clear")
+
 
