@@ -45,3 +45,10 @@ class Game:
     def generate_particle(self, icon):
         self.particle_list.append(Particle(random.randint(5, 15), 0, icon))
 
+    def position_particles(self):
+        for particle in self.particle_list:
+            self.game_map.map[particle.y_pos][particle.x_pos] = bg_block
+            particle.move_to_available(self.game_map.map)
+            self.game_map.map[particle.y_pos][particle.x_pos] = particle.icon
+
+
