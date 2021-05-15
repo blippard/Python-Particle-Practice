@@ -1,4 +1,6 @@
 import random
+import time
+import os
 
 global bg_block
 bg_block = " "
