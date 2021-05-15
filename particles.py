@@ -61,4 +61,8 @@ class Game:
     def clear_screen(self):
         os.system("cls" if os.name == "nt" else "clear")
 
+    def refresh(self):
+        self.position_particles()
+        self.game_map.print_map()
+
 
