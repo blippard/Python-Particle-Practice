@@ -24,5 +24,16 @@ class Particle:
         self.y_pos = y_pos
         self.icon = f"\033[{random.randint(31, 33)}m{icon}\x1b[0m"
 
+    def move_to_available(self, Map):
+        if (self.y_pos == len(Map) - 1) or (self.x_pos == len(Map[0]) - 1) or self.x_pos == 0:
+            pass
+        elif Map[self.y_pos + 1][self.x_pos] == bg_block:
+            self.y_pos += 1
+        elif Map[self.y_pos + 1][self.x_pos - 1] == bg_block and Map[self.y_pos][self.x_pos - 1] == bg_block:
+            self.y_pos += 1
+            self.x_pos -= 1
+        elif Map[self.y_pos + 1][self.x_pos + 1] == bg_block and Map[self.y_pos][self.x_pos + 1] == bg_block:
+            self.y_pos += 1
+            self.x_pos += 1
 
 
